@@ -2,7 +2,11 @@
 
 This is a starter Rust ARGEMS code which has REST API and database interaction.
 
-
+## .env file
+Create .env file containing:
+```
+DATABASE_URL=argems.sqlite3
+```
 
 ## Development
 
