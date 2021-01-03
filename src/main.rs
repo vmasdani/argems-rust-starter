@@ -1,4 +1,5 @@
 use actix_cors::Cors;
+use actix_files::Files;
 use actix_web::{http::ContentEncoding, middleware::Compress, App, HttpServer};
 
 pub mod handler;
@@ -56,7 +57,7 @@ async fn main() -> std::io::Result<()> {
             .service(get_todo)
             .service(delete_todo)
             .service(post_todo)
-            .service(home)
+            .service(Files::new("/", "./frontend").index_file("index.html"))
     })
     .bind("127.0.0.1:8080")?
     .run()

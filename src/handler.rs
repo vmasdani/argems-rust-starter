@@ -1,4 +1,6 @@
-use actix_web::{delete, error::BlockingError, get, post, web, web::Path, HttpResponse, Responder};
+use std::path::PathBuf;
+
+use actix_web::{HttpRequest, HttpResponse, Responder, delete, error::BlockingError, get, post, web, web::Path};
 use diesel::{
     r2d2::{self, ConnectionManager},
     SqliteConnection,
@@ -91,7 +93,9 @@ pub async fn post_todo(pool: web::Data<DbPool>, todo: web::Json<Todo>) -> impl R
     }
 }
 
-#[get("/")]
-pub async fn home() -> impl Responder {
-    HttpResponse::Ok().body("Hellowolrd.")
-}
+// #[get("/{filename:.*}")]
+// pub async fn home(req: HttpRequest) -> impl Responder {
+//     let path: PathBuf = req.match_info().query("filename").parse().unwrap();
+
+//     HttpResponse::Ok().body(NamedFile::open(path))
+// }
