@@ -13,6 +13,8 @@ DATABASE_URL=argems.sqlite3
 - Install prerequisites
     1. [Rust](https://www.rust-lang.org/tools/install)
     2. [Elm](https://guide.elm-lang.org/install/elm.html)
+    3. If running ubuntu based distro, you might need to install some dependencies
+```sudo apt install build-essential libsqlite3-dev```
 
 - Rust
 ```
