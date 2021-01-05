@@ -29,7 +29,16 @@ cd frontend
 
 # Build
 To build, you need Python 3, and also [Node.JS](https://nodejs.org/en/download/) for minification.  
-Edit your app URL in `release.json`.
+
+Add `env.json` file consisting:
+```
+{
+  "base_url": "http://localhost:8080",
+  "server_port": "8080"
+} 
+```
+
+Then run:
 ```
 sudo npm i -g uglify-js
 ./release.py
