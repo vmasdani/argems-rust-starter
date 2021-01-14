@@ -35,7 +35,7 @@ index_html_contents = """<html>
 steps = [
     ("mkdir -p dist/frontend", "."),
     ("cross build --target x86_64-unknown-linux-musl --release", "."),
-    ("cp target/release/argems-rust-starter .env dist", "."),
+    ("cp target/x86_64-unknown-linux-musl/release/argems-rust-starter .env dist", "."),
     ("./build.sh", "./frontend"),
     ("cp dist/* ../dist/frontend", "./frontend"),
 ]
