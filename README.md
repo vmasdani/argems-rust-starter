@@ -28,9 +28,9 @@ cd frontend
 ```
 
 # Build
-To build, you need Python 3, and also [Node.JS](https://nodejs.org/en/download/) for minification.  
+- To build, you need Python 3, and also [Node.JS](https://nodejs.org/en/download/) for minification.  
 
-Add `env.json` file consisting:
+- Add `env.json` file consisting:
 ```
 {
   "base_url": "http://localhost:8080",
@@ -38,7 +38,9 @@ Add `env.json` file consisting:
 } 
 ```
 
-Then run:
+- Install [Docker](https://docs.docker.com/get-docker/) and [cross](https://github.com/rust-embedded/cross)  
+
+- Then run:
 ```
 sudo npm i -g uglify-js
 ./release.py
